@@ -12,7 +12,7 @@ const createNestServer = async (expressInstance: express.Express) => {
     AppModule,
     new ExpressAdapter(expressInstance),
   );
-
+  app.enableCors();
   return app.init();
 };
 
